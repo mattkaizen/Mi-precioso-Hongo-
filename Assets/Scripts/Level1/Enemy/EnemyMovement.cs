@@ -60,11 +60,22 @@ public class EnemyMovement : MonoBehaviour
             isReachedPosA = true;
             isReachedPosB = false;
         }
+        else if(enemyRb.position.x > pointB.x) //Doble verificacion (Cuando se pierden frames, el enemigo ignora la verifacion de distancia
+        {
+            isReachedPosB = true;
+            isReachedPosA = false;
+        }
 
         else if(Vector2.Distance(enemyRb.position, pointB) < minDistanceToPoint )
         {
             isReachedPosB = true;
             isReachedPosA = false;
+        }
+
+        else if (enemyRb.position.x < pointA.x)
+        {
+            isReachedPosA = true;
+            isReachedPosB = false;
         }
     }
 
