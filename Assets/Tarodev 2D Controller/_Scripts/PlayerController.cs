@@ -162,7 +162,7 @@ namespace TarodevController {
                 // Apply bonus at the apex of a jump
                 var apexBonus = Mathf.Sign(Input.X) * _apexBonus * _apexPoint;
                 _currentHorizontalSpeed += apexBonus * Time.deltaTime;
-                Debug.Log("Velocidad Actual" + _currentHorizontalSpeed);
+             
             }
             else {
                 // No input. Let's slow the character down
